@@ -35,11 +35,6 @@
       <object>objects\land_copper</object>
       <object>objects\land</object>
     </objects>
-    <objects name="manipulators">
-      <object>objects\rotator</object>
-      <object>objects\rotator_min</object>
-      <object>objects\rotator_plus</object>
-    </objects>
     <objects name="resources">
       <object>objects\copper</object>
       <object>objects\resource</object>
