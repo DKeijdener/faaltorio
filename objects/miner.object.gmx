@@ -3,7 +3,7 @@
   <spriteName>miner_sprite</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>building</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -361,11 +361,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>sprite_height*.6*cos(pi*rot/180)</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>-sprite_height*.6*sin(pi*rot/180)</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -425,11 +425,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>sprite_height*.6*cos(pi*rot/180)</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>-sprite_height*.6*sin(pi*rot/180)</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -489,11 +489,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>sprite_height*.6*cos(pi*rot/180)</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>-sprite_height*.6*sin(pi*rot/180)</string>
           </argument>
           <argument>
             <kind>0</kind>
