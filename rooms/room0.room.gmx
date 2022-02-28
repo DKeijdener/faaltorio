@@ -53,6 +53,8 @@
   <instances>
     <instance objName="creator" x="0" y="0" name="inst_EBABECCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="land_copper" x="224" y="160" name="inst_ACBB7C1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_coal" x="512" y="160" name="inst_02E48BDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_iron" x="352" y="320" name="inst_FACDB5D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
