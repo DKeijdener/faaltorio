@@ -11,6 +11,7 @@
     <sprite>sprites\factory_sprite</sprite>
     <sprite>sprites\copper_sprite</sprite>
     <sprite>sprites\copper_plate_sprite</sprite>
+    <sprite>sprites\green_circuit_sprite</sprite>
     <sprite>sprites\coal_sprite</sprite>
     <sprite>sprites\iron_sprite</sprite>
     <sprite>sprites\iron_plate_sprite</sprite>
@@ -34,6 +35,7 @@
       <object>objects\miner</object>
       <object>objects\building</object>
       <object>objects\smelter</object>
+      <object>objects\factory</object>
     </objects>
     <object>objects\creator</object>
     <objects name="effects">
@@ -48,6 +50,7 @@
     <objects name="resources">
       <object>objects\copper</object>
       <object>objects\copper_plate</object>
+      <object>objects\green_circuit</object>
       <object>objects\coal</object>
       <object>objects\iron</object>
       <object>objects\iron_plate</object>
