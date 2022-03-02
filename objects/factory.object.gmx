@@ -39,7 +39,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>content_iron</string>
+            <string>content_iron_plate</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -63,7 +63,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>content_coal</string>
+            <string>content_copper_plate</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -73,9 +73,9 @@
       </action>
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -87,11 +87,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>content_copper</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <string>var self.contents = array_create(2)
+var self.ingredients = array_create(2)
+
+for (var i = 0; i &lt; array_length_1d(self.contents); i++;)
+{
+    self.contents[i] = 0
+    self.ingredients[i] = 0
+}
+
+self.ingredients[0] = 1
+self.ingredients[1] = 1
+
+self.product = green_circuit
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -115,12 +125,18 @@
             <kind>1</kind>
             <string>var resource_type = object_get_name(other.object_index)
 
-
-if resource_type == 'copper_plate' and content_copper_plate &lt; ingredient_copper_plate
+if resource_type == 'copper_plate' and self.contents[0] &lt; self.ingredients[0]
 {
     instance_destroy(other)
-    content_copper += 1
-    smelter_script(self)
+    self.contents[0] += 1
+    recipes_script(self)
+}
+
+if resource_type == 'iron_plate' and self.contents[1] &lt; self.ingredients[1]
+{
+    instance_destroy(other)
+    self.contents[1] += 1
+    recipes_script(self)
 }
 
 </string>
