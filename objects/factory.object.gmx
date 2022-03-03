@@ -25,54 +25,6 @@
       </action>
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>content_iron_plate</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>content_copper_plate</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -87,8 +39,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var self.contents = array_create(2)
-var self.ingredients = array_create(2)
+            <string>var self.contents = array_create(resource_ids(-1,-1))
+var self.ingredients = array_create(resource_ids(-1,-1))
 
 for (var i = 0; i &lt; array_length_1d(self.contents); i++;)
 {
@@ -96,10 +48,10 @@ for (var i = 0; i &lt; array_length_1d(self.contents); i++;)
     self.ingredients[i] = 0
 }
 
-self.ingredients[0] = 1
-self.ingredients[1] = 1
+recipe_selection = 5
 
-self.product = green_circuit
+factory_ingredients_script(self, recipe_selection)
+self.product = resource_ids(5, false)
 
 </string>
           </argument>
@@ -125,20 +77,16 @@ self.product = green_circuit
             <kind>1</kind>
             <string>var resource_type = object_get_name(other.object_index)
 
-if resource_type == 'copper_plate' and self.contents[0] &lt; self.ingredients[0]
+for (var i = 0; i &lt; array_length_1d(self.ingredients); i++;)
 {
-    instance_destroy(other)
-    self.contents[0] += 1
-    recipes_script(self)
+    if resource_type == resource_ids(i, true) and self.contents[i] &lt; self.ingredients[i]
+    {
+        instance_destroy(other)
+        self.contents[i] += 1
+        _prod = factory_produce_script(self)
+        return _prod
+    }
 }
-
-if resource_type == 'iron_plate' and self.contents[1] &lt; self.ingredients[1]
-{
-    instance_destroy(other)
-    self.contents[1] += 1
-    recipes_script(self)
-}
-
 </string>
           </argument>
         </arguments>

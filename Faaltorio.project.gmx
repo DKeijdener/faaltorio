@@ -27,9 +27,11 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\smelter_script.gml</script>
-    <script>scripts\recipes_script.gml</script>
+    <script>scripts\smelter_produce_script.gml</script>
+    <script>scripts\factory_produce_script.gml</script>
     <script>scripts\eject_script.gml</script>
+    <script>scripts\resource_ids.gml</script>
+    <script>scripts\factory_ingredients_script.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="buildings">
