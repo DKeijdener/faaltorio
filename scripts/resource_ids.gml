@@ -29,7 +29,26 @@ if (_id == 4)
 }
 if (_id == 5)
 {
+    if _justname == true return 'steel'
+    else return steel
+}
+if (_id == 6)
+{
     if _justname == true return 'green_circuit'
     else return green_circuit
 }
-
+if (_id == 7)
+{
+    if _justname == true return 'computer'
+    else return computer
+}
+if (_id == 8)
+{
+    if _justname == true return 'rocket_fuel'
+    else return rocket_fuel
+}
+if (_if == 9)
+{
+    if _justname == true return 'rocket'
+    else return rocket
+}

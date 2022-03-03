@@ -126,7 +126,7 @@ if _inst != noone
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="56">
+    <event eventtype="9" enumb="52">
       <action>
         <libid>1</libid>
         <id>603</id>

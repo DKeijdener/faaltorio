@@ -12,15 +12,21 @@
     <sprite>sprites\copper_sprite</sprite>
     <sprite>sprites\copper_plate_sprite</sprite>
     <sprite>sprites\green_circuit_sprite</sprite>
+    <sprite>sprites\rocket_sprite</sprite>
+    <sprite>sprites\rocket_running_sprite</sprite>
+    <sprite>sprites\computer_sprite</sprite>
+    <sprite>sprites\rocket_fuel_sprite</sprite>
     <sprite>sprites\coal_sprite</sprite>
     <sprite>sprites\iron_sprite</sprite>
     <sprite>sprites\iron_plate_sprite</sprite>
+    <sprite>sprites\steel_sprite</sprite>
     <sprite>sprites\belt_sprite</sprite>
     <sprite>sprites\plop_sprite</sprite>
     <sprite>sprites\placeholder_empty_sprite</sprite>
     <sprite>sprites\copper_ore_sprite</sprite>
     <sprite>sprites\coal_ore_sprite</sprite>
     <sprite>sprites\iron_ore_sprite</sprite>
+    <sprite>sprites\selection_wheel_sprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -55,10 +61,20 @@
       <object>objects\copper</object>
       <object>objects\copper_plate</object>
       <object>objects\green_circuit</object>
+      <object>objects\computer</object>
+      <object>objects\rocket_fuel</object>
       <object>objects\coal</object>
       <object>objects\iron</object>
       <object>objects\iron_plate</object>
+      <object>objects\steel</object>
       <object>objects\resource</object>
+    </objects>
+    <object>objects\rocket</object>
+    <objects name="recipe_selectors">
+      <object>objects\button</object>
+      <object>objects\button_green_circuit</object>
+      <object>objects\button_computer</object>
+      <object>objects\selection_wheel</object>
     </objects>
   </objects>
   <rooms name="rooms">
