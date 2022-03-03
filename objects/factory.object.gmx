@@ -11,20 +11,6 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -54,6 +40,20 @@ self.product = -1
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
     </event>
     <event eventtype="4" ename="resource">
       <action>
@@ -72,18 +72,7 @@ self.product = -1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var resource_type = object_get_name(other.object_index)
-
-for (var i = 0; i &lt; array_length_1d(self.ingredients); i++;)
-{
-    if resource_type == resource_ids(i, true) and self.contents[i] &lt; self.ingredients[i]
-    {
-        instance_destroy(other)
-        self.contents[i] += 1
-        _prod = factory_produce_script(self)
-        return _prod
-    }
-}
+            <string>absorb_resource(self, other)
 </string>
           </argument>
         </arguments>
@@ -103,6 +92,29 @@ for (var i = 0; i &lt; array_length_1d(self.ingredients); i++;)
         <isnot>0</isnot>
       </action>
     </event>
+    <event eventtype="6" enumb="56">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>self.depth = -10
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
@@ -120,8 +132,13 @@ for (var i = 0; i &lt; array_length_1d(self.ingredients); i++;)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var listofbuttons = [button_green_circuit, button_computer]
+            <string>var self.listofbuttons = array_create(4)
+self.listofbuttons[0] = button_green_circuit
+self.listofbuttons[1] = button_computer
+self.listofbuttons[2] = button_rocket_fuel
+self.listofbuttons[3] = button_rocket
 
+self.depth = -20
 instance_create(self.x, self.y, selection_wheel)
 
 step = 2 * pi / array_length_1d(listofbuttons)

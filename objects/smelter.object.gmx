@@ -11,20 +11,6 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -48,14 +34,25 @@ for (var i = 0; i &lt; array_length_1d(self.contents); i++;)
     self.ingredients[i] = 0
 }
 
-self.ingredients[0] = 1
-self.ingredients[1] = 3
-self.ingredients[2] = 3
-self.ingredients[4] = 2
+self.product = -1
 
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="resource">
@@ -75,18 +72,7 @@ self.ingredients[4] = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var resource_type = object_get_name(other.object_index)
-
-for (var i = 0; i &lt; array_length_1d(self.ingredients); i++;)
-{
-    if resource_type == resource_ids(i, true) and self.contents[i] &lt; self.ingredients[i]
-    {
-        instance_destroy(other)
-        self.contents[i] += 1
-        _prod = smelter_produce_script(self)
-        return _prod
-    }
-}
+            <string>absorb_resource(self, other)
 </string>
           </argument>
         </arguments>
@@ -104,6 +90,94 @@ for (var i = 0; i &lt; array_length_1d(self.ingredients); i++;)
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="6" enumb="57">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>self.depth = -10
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var self.listofbuttons = array_create(3)
+self.listofbuttons[0] = button_copper_plate
+self.listofbuttons[1] = button_iron_plate
+self.listofbuttons[2] = button_steel
+
+self.depth = -20
+
+instance_create(self.x, self.y, selection_wheel)
+
+step = 2 * pi / array_length_1d(listofbuttons)
+
+for(butnr=0; butnr &lt; array_length_1d(listofbuttons); butnr++;)
+{
+    _posx = self.x + 32*cos(butnr*step)
+    _posy = self.y + 32*sin(butnr*step)
+    _button = instance_create(_posx, _posy, listofbuttons[butnr])
+    _button.linkedmachine = self
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var _textbox = instance_nearest(self.x, self.y, textbox)
+
+draw_text(self.x, self.y, 'Hallo!')
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

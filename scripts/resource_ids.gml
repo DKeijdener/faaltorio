@@ -1,7 +1,7 @@
 _id = argument0
 _justname = argument1
 
-if (_id == -1) return 5
+if (_id == -1) return 10
 if (_id == 0)
 {
     if _justname == true return 'coal'
@@ -47,7 +47,7 @@ if (_id == 8)
     if _justname == true return 'rocket_fuel'
     else return rocket_fuel
 }
-if (_if == 9)
+if (_id == 9)
 {
     if _justname == true return 'rocket'
     else return rocket

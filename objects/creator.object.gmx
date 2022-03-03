@@ -169,6 +169,27 @@ if _inst != noone
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>clear_space(self)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>if not collision_rectangle(mouse_x - .5*building_size, mouse_y - .5*building_size, mouse_x + .5*building_size, mouse_y + .5*building_size, building, false, true)
 {
     instance_create(mouse_x, mouse_y, factory)
@@ -195,6 +216,27 @@ if _inst != noone
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>clear_space(self)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>if not collision_rectangle(mouse_x - .5*building_size, mouse_y - .5*building_size, mouse_x + .5*building_size, mouse_y + .5*building_size, building, false, true)
 {
     instance_create(mouse_x, mouse_y, smelter)
@@ -205,6 +247,27 @@ if _inst != noone
       </action>
     </event>
     <event eventtype="9" enumb="49">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>clear_space(self)
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>

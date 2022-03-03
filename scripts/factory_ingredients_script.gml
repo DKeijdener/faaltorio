@@ -7,6 +7,21 @@ for (var i = 0; i < resource_ids(-1,-1); i++;)
     _producer.ingredients[i] = 0
 }
 
+if(_toproduce == 3)
+{
+    _producer.ingredients[0] = 1
+    _producer.ingredients[1] = 3
+}
+if(_toproduce == 4)
+{
+    _producer.ingredients[0] = 1
+    _producer.ingredients[2] = 3
+}
+if(_toproduce == 5)
+{
+    _producer.ingredients[0] = 1
+    _producer.ingredients[4] = 2
+}
 if(_toproduce == 6)
 {
     _producer.ingredients[3] = 1

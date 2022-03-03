@@ -27,17 +27,21 @@
     <sprite>sprites\coal_ore_sprite</sprite>
     <sprite>sprites\iron_ore_sprite</sprite>
     <sprite>sprites\selection_wheel_sprite</sprite>
+    <sprite>sprites\UI_sprite</sprite>
+    <sprite>sprites\controls_sprite</sprite>
+    <sprite>sprites\textbox_sprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\smelter_produce_script.gml</script>
     <script>scripts\factory_produce_script.gml</script>
     <script>scripts\eject_script.gml</script>
     <script>scripts\resource_ids.gml</script>
     <script>scripts\factory_ingredients_script.gml</script>
+    <script>scripts\absorb_resource.gml</script>
+    <script>scripts\clear_space.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="buildings">
@@ -73,8 +77,18 @@
     <objects name="recipe_selectors">
       <object>objects\button</object>
       <object>objects\button_green_circuit</object>
+      <object>objects\button_copper_plate</object>
+      <object>objects\button_iron_plate</object>
+      <object>objects\button_steel</object>
       <object>objects\button_computer</object>
+      <object>objects\button_rocket_fuel</object>
+      <object>objects\button_rocket</object>
       <object>objects\selection_wheel</object>
+    </objects>
+    <objects name="UI">
+      <object>objects\UI</object>
+      <object>objects\controls</object>
+      <object>objects\textbox</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>1024</width>
-  <height>1024</height>
+  <height>720</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -52,29 +52,27 @@
   </views>
   <instances>
     <instance objName="creator" x="0" y="0" name="inst_EBABECCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_copper" x="224" y="160" name="inst_ACBB7C1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_copper" x="224" y="128" name="inst_36D811B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_copper" x="256" y="96" name="inst_8F8D2113" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_copper" x="256" y="160" name="inst_397AB608" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_copper" x="256" y="96" name="inst_6340248B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_copper" x="224" y="128" name="inst_ACBB7C1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_copper" x="256" y="160" name="inst_36D811B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_copper" x="224" y="96" name="inst_8F8D2113" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_copper" x="192" y="128" name="inst_397AB608" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_copper" x="224" y="160" name="inst_6340248B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="land_copper" x="256" y="128" name="inst_86BB39D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="832" y="448" name="inst_5BB81549" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="832" y="384" name="inst_8F6E64CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="864" y="384" name="inst_CF6C5678" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="864" y="416" name="inst_4A57D3CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="864" y="416" name="inst_2056AFAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="864" y="448" name="inst_54CFD3A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="896" y="384" name="inst_63F21ABF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="864" y="384" name="inst_DE6960AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_iron" x="128" y="800" name="inst_E31DD5FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_iron" x="160" y="768" name="inst_6EE40D00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_iron" x="96" y="736" name="inst_59DD298B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_iron" x="96" y="736" name="inst_5CFDB1E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_iron" x="128" y="736" name="inst_C9817AEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_iron" x="128" y="768" name="inst_D1D7D48C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_copper" x="192" y="352" name="inst_1F2CE9FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_coal" x="256" y="416" name="inst_54A4789B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="land_iron" x="320" y="352" name="inst_6DFE0583" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_coal" x="640" y="352" name="inst_5BB81549" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_coal" x="608" y="416" name="inst_8F6E64CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_coal" x="672" y="384" name="inst_2056AFAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_coal" x="608" y="384" name="inst_54CFD3A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_coal" x="640" y="384" name="inst_63F21ABF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_coal" x="672" y="416" name="inst_DE6960AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_iron" x="128" y="576" name="inst_6EE40D00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_iron" x="160" y="544" name="inst_59DD298B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_iron" x="128" y="544" name="inst_C9817AEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_iron" x="192" y="608" name="inst_D1D7D48C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_iron" x="160" y="608" name="inst_96F64211" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="land_iron" x="128" y="608" name="inst_CBE3DF31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UI" x="800" y="320" name="inst_FAD3D5F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="controls" x="864" y="128" name="inst_0BA88326" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="textbox" x="800" y="256" name="inst_665DC415" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
