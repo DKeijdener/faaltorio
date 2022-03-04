@@ -33,6 +33,27 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>window_set_fullscreen(true)
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="6" enumb="61">
       <action>
@@ -143,7 +164,7 @@ if _inst != noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if not collision_rectangle(mouse_x - .5*building_size, mouse_y - .5*building_size, mouse_x + .5*building_size, mouse_y + .5*building_size, building, false, true)
+            <string>if not collision_rectangle(mouse_x - .4*building_size, mouse_y - .4*building_size, mouse_x + .4*building_size, mouse_y + .4*building_size, building, false, true)
 {
     instance_create(mouse_x, mouse_y, belt)
 }

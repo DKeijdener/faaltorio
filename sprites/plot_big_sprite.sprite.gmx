@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>11</bbox_left>
-  <bbox_right>20</bbox_right>
+  <bbox_left>0</bbox_left>
+  <bbox_right>31</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>31</bbox_bottom>
   <HTile>0</HTile>
@@ -20,10 +20,10 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\rocket_running_sprite_0.png</frame>
-    <frame index="1">images\rocket_running_sprite_1.png</frame>
-    <frame index="2">images\rocket_running_sprite_2.png</frame>
-    <frame index="3">images\rocket_running_sprite_3.png</frame>
-    <frame index="4">images\rocket_running_sprite_4.png</frame>
+    <frame index="0">images\plot_big_sprite_0.png</frame>
+    <frame index="1">images\plot_big_sprite_1.png</frame>
+    <frame index="2">images\plot_big_sprite_2.png</frame>
+    <frame index="3">images\plot_big_sprite_3.png</frame>
+    <frame index="4">images\plot_big_sprite_4.png</frame>
   </frames>
 </sprite>

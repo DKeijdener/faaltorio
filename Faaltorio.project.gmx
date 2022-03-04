@@ -22,6 +22,7 @@
     <sprite>sprites\steel_sprite</sprite>
     <sprite>sprites\belt_sprite</sprite>
     <sprite>sprites\plop_sprite</sprite>
+    <sprite>sprites\plot_big_sprite</sprite>
     <sprite>sprites\placeholder_empty_sprite</sprite>
     <sprite>sprites\copper_ore_sprite</sprite>
     <sprite>sprites\coal_ore_sprite</sprite>
@@ -33,6 +34,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\opening_screen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -54,6 +56,7 @@
     <object>objects\creator</object>
     <objects name="effects">
       <object>objects\plop</object>
+      <object>objects\big_plop</object>
     </objects>
     <objects name="land">
       <object>objects\land_copper</object>
@@ -90,8 +93,10 @@
       <object>objects\controls</object>
       <object>objects\textbox</object>
     </objects>
+    <object>objects\menu</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\menu_kamer</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

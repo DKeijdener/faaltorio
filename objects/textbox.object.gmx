@@ -7,7 +7,117 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var self.ingredients = array_create(resource_ids(-1,-1))
+var self.contents = array_create(resource_ids(-1,-1))
+
+for (var i = 0; i &lt; array_length_1d(self.contents); i++;)
+{
+    self.ingredients[i] = 0
+    self.contents[i] = 0
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var _smel = instance_nearest(mouse_x, mouse_y, smelter)
+var _fact = instance_nearest(mouse_x, mouse_y, factory)
+var _butt = instance_nearest(mouse_x, mouse_y, button)
+
+var dist_smel = 999999999
+var dist_fact = 999999999
+var dist_butt = 999999999
+if _smel != noone
+    dist_smel = (_smel.x - mouse_x)*(_smel.x - mouse_x) + (_smel.y - mouse_y)*(_smel.y - mouse_y)
+if _fact != noone
+    dist_fact = (_fact.x - mouse_x)*(_fact.x - mouse_x) + (_fact.y - mouse_y)*(_fact.y - mouse_y)
+if _butt != noone
+    dist_butt = (_butt.x - mouse_x)*(_butt.x - mouse_x) + (_butt.y - mouse_y)*(_butt.y - mouse_y)
+closest = min(dist_butt, dist_fact, dist_smel)
+    
+if closest &lt; 256
+{
+    tekst = ''
+    if closest == dist_butt
+    {
+        factory_ingredients_script(self, _butt.recipe_selection)
+        tekst = 'Recept#' + resource_ids(_butt.recipe_selection, true) + '##'
+        for (var i = 0; i &lt; array_length_1d(self.ingredients); i++;)
+            if (self.ingredients[i] &gt; 0) tekst = tekst + resource_ids(i, true) + ': ' + string(self.ingredients[i]) + '#'
+    }
+    if closest == dist_fact
+    {
+        tekst = 'Fabriek#'
+        if(_fact.product &gt;= 0)
+        {
+            tekst = tekst + '#Recept:#' + object_get_name(_fact.product) + '#'
+            tekst = tekst + '#Benodigdheden:#'
+            for (var i = 0; i &lt; array_length_1d(_fact.ingredients); i++;)
+                if (_fact.ingredients[i] &gt; 0) tekst = tekst + resource_ids(i, true) + ': ' + string(_fact.ingredients[i]) + '#'
+            tekst = tekst + '#Inhoud:#'
+            for (var i = 0; i &lt; array_length_1d(_fact.contents); i++;)
+                if (_fact.contents[i] &gt; 0) tekst = tekst + resource_ids(i, true) + ': ' + string(_fact.contents[i]) + '#'
+        }
+    }
+    if closest == dist_smel
+    {
+        tekst = 'Oven#' 
+        if(_smel.product &gt;= 0)
+        {
+            tekst = tekst + '#Recept:#' + object_get_name(_smel.product) + '#'
+            tekst = tekst + '#Benodigdheden:#'
+            for (var i = 0; i &lt; array_length_1d(_smel.ingredients); i++;)
+                if (_smel.ingredients[i] &gt; 0) tekst = tekst + resource_ids(i, true) + ': ' + string(_smel.ingredients[i]) + '#'
+            tekst = tekst + '#Inhoud:#'
+            for (var i = 0; i &lt; array_length_1d(_smel.contents); i++;)
+                if (_smel.contents[i] &gt; 0) tekst = tekst + resource_ids(i, true) + ': ' + string(_smel.contents[i]) + '#'
+        }
+    }
+    draw_text_colour(self.x + 10, self.y + 10, tekst, c_black, c_black, c_black, c_black, 1)
+}
+else
+    draw_text_colour(self.x + 10, self.y + 10, '', c_black, c_black, c_black, c_black, 1)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
